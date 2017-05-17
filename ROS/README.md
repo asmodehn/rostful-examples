@@ -1,3 +1,21 @@
+Rostful ROS Examples
+====================
+
+This directory contains a set of launch files and script that you can use to get an understanding of how to use Rostful.
+
+1) Setup your environment
+
+Building rostful is required to get it in your environment for ROS to find it.
+
+2) Run the examples :
+
+`roslaunch launch/turtlesim.launch`
+
+----
+OLD FILE CONTENT FOLLOWS
+
+----
+
 # ROSTful Examples
 Basic examples for Rostful
 
