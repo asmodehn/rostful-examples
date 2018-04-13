@@ -7,9 +7,34 @@ This directory contains a set of launch files and script that you can use to get
 
 Building rostful is required to get it in your environment for ROS to find it.
 
-2) Run the examples :
+2) Run the examples.
 
-`roslaunch launch/turtlesim.launch`
+
+The ROS way
+--------------
+
+```
+$ source /opt/ros/kinetic/setup.bash
+roslaunch launch/turtlesim.launch
+```
+
+The Python way
+--------------
+
+There is currently no launcher for pyros, so you have to run manually
+
+```
+$ source /opt/ros/kinetic/setup.bash
+$ roscore
+```
+```
+$ source /opt/ros/kinetic/setup.bash
+$ rosrun turtlesim turtlesim_node
+```
+
+```
+$ python -m rostful run
+```
 
 ----
 OLD FILE CONTENT FOLLOWS
