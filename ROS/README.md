@@ -3,25 +3,11 @@ Rostful ROS Examples
 
 This directory contains a set of launch files and script that you can use to get an understanding of how to use Rostful.
 
-1) Setup your environment
-
-Building rostful is required to get it in your environment for ROS to find it.
-
-2) Run the examples.
-
-
-The ROS way
---------------
-
-```
-$ source /opt/ros/kinetic/setup.bash
-roslaunch launch/turtlesim.launch
-```
 
 The Python way
 --------------
 
-There is currently no launcher for pyros, so you have to run manually
+There is currently no launch system for pyros, so you have to run manually.
 
 ```
 $ source /opt/ros/kinetic/setup.bash
@@ -32,9 +18,35 @@ $ source /opt/ros/kinetic/setup.bash
 $ rosrun turtlesim turtlesim_node
 ```
 
+This is the advised way to launch rostful, as it works well both from source or install,
+integrate with python workflow, and only relies on the bare minimum of ROS.
+
 ```
-$ python -m rostful run
+$ mkvirtualenv rostful
+(rostful)$ pip install rostful pyros[ros]
+(rostful)$ python -m rostful run --ros
 ```
+
+
+The ROS way
+--------------
+
+Remember to install rostful and dependencies
+
+```
+̀$ sudo apt install ros-kinetic-rostful
+```
+
+This example has a simple ROS launcher
+
+```
+$ source /opt/ros/kinetic/setup.bash
+roslaunch launch/turtlesim.launch
+```
+
+Note: using rostful from source in a ROS workflow (catkin environment) is not recommended.
+Use the more flexible Python way instead, leveraging the pyros\[ros\] interface.
+
 
 ----
 OLD FILE CONTENT FOLLOWS
