@@ -39,10 +39,15 @@ This is the advised way to launch rostful, as it works well both from source or 
 integrate with python workflow, and only relies on the bare minimum of ROS.
 
 ```
-$ mkvirtualenv rostful
-(rostful)$ pip install rostful pyros[ros]
-(rostful)$ python -m rostful run --ros
+$mkvirtualenv --system-site-packages --python=/usr/bin/python2.7 rostful_test
+(rostful_test)$ pip install rostful pyros[ros]
+(rostful_test)$ python -m rostful run
 ```
+
+Troubleshooting:
+- make sure you are running python2 (python3 not yet supported all the way - but could be...)
+- make sure you are running python and rostful in a terminal not polluted by ROS (your PYTHONPATH should be empty, modifying it is a hack)
+- make sure pyros-setup configuration created in your virtualenv uses the ROS distribution installed on your system
 
 
 The ROS way
