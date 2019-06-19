@@ -1,8 +1,8 @@
 <package>
   <name>rostful_examples</name>
-  <version>0.0.8</version>
+  <version>0.2.1</version>
   <description>
-      REST API for ROS - Examples
+      REST API for ROS - Example Package, only for integration with ROS dependencies
   </description>
 
   <license>BSD</license>
@@ -20,6 +20,10 @@
 
   <run_depend>rospy</run_depend>
   <run_depend>turtlesim</run_depend>
+ 
+  <!-- transitive ROS dependencies declare here, since they cannot be found by rosdep -->
+  <run_depend>pyros_utils</run_depend>
+
 
   <!-- documentation dependencies -->
   <build_depend>python-catkin-pkg</build_depend>
